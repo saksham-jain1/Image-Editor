@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Editor</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <script src="index.js"></script>
+    <div class="main">
+        <div class="editor">
+            <div class="download">
+                <button onclick=selectImg()><input onchange=setImg() type="file" id="file-input" accept="image/*" hidden>Choose Image</button>
+                <button class="download_btn" onclick=download()>Download</button>
+            </div>
+            <div class="preview">
+                <img src="../weather-app/src/Backgrounds/cloudNight.jpg" id="edit" alt="">
+            </div>
+            <div class="slider" id="slider">
+                <span id="input_range">0</span>
+                <input type="range" min="0" max="360"  oninput=update_value() value="0" name="" id="input_slider">
+            </div>
+            <div class="options">
+                <button class="option selected" id="rotate" onclick="update_option('rotate')">Rotate</button>
+                <button class="option" id="skew" onclick="update_option('skew')">Skew</button>
+                <button class="option" id="brightness" onclick="update_option('brightness')">Brightness</button>
+                <button class="option" id="contrast" onclick="update_option('contrast')">Contrast</button>
+                <button class="option" id="grayscale" onclick="update_option('grayscale')">B&W</button>
+                <button class="option" id="flip" onclick="update_option('flip')">Flip</button>
+                <button class="option" id="hue" onclick="update_option('hue')">Hue</button>
+                <button class="option" id="saturate" onclick="update_option('saturate')">Saturation</button>
+                <button class="option" id="blur" onclick="update_option('blur')">Blur</button>
+                <button class="option" id="sepia" onclick="update_option('sepia')">Sepia</button>
+                <button class="option" id="opacity" onclick="update_option('opacity')">Opacity</button>
+                <button class="option" id="invert" onclick="update_option('invert')">Invert</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
